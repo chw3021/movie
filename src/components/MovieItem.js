@@ -9,7 +9,7 @@ const MovieItem = ({ id, title, genre, img }) => {
   };
 
   return (
-    <div className="movie-item" onClick={handleClick}>
+    <div className="MovieItem" onClick={handleClick}>
       <img src={img} alt={title} />
       <h3>{title}</h3>
       <p>{genre}</p>

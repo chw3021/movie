@@ -10,6 +10,7 @@ const Home = () => {
 
   return (
     <div>
+      <Header />
       <MovieList data = {data}/>
     </div>
   );
