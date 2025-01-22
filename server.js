@@ -11,7 +11,7 @@ app.use(cors());
 // 파일 업로드를 위한 multer 설정
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'public');
+    cb(null, 'public/assets/imgs');
   },
   filename: (req, file, cb) => {
     const originalFilename = req.body.filename || Date.now() + path.extname(file.originalname);
@@ -28,7 +28,8 @@ app.post('/upload', upload.single('file'), (req, res) => {
   if (!req.file) {
     return res.status(400).send('No file uploaded.');
   }
-  res.json({ filePath: `${req.file.filename}` });
+  const filePath = `${req.filename}`;
+  res.json({ filePath });
 });
 
 app.listen(PORT, () => {

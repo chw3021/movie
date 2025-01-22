@@ -83,7 +83,7 @@ const MovieEditor = ({ id, initData }) => {
               const imgPath = data.filePath;
               
               onUpdate(id,{ ...state, img: imgPath });
-              //navigate(`/movieDetail/${id}`);
+              navigate(`/movieDetail/${id}`);
           }
       } catch (error) {
           console.error('Error uploading file:', error);
