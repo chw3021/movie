@@ -1,20 +1,26 @@
-
 .header {
     display: flex;
-    align-items: center; /* 세로 방향으로 가운데 정렬 */
+    flex-direction: column; /* 방향을 세로로 변경 */
+    align-items: center; /* 기본적으로 가로 방향 중앙 정렬 */
     padding: 10px;
-    background-color: #f8f9fa; /* 배경색 (선택 사항) */
+    background-color: #f8f9fa; /* 배경색 */
+    position: relative; /* 로고 위치 조정을 위한 기준 */
 }
 
 .logo {
+    position: absolute; /* 절대 위치 지정 */
+    left: 10px; /* 왼쪽 끝에서 10px 간격 */
+    top: 10px; /* 위쪽에서 10px 간격 */
     width: 50px; /* 로고 크기 */
     height: auto; /* 비율 유지 */
-    margin-right: 20px; /* 로고와 네비게이터 사이 간격 */
 }
 
-.header h1 {
-    flex-grow: 1; /* 남은 공간을 채움 */
-    margin: 0; /* 기본 여백 제거 */
-    font-size: 1.2rem; /* 제목 크기 (필요에 따라 조정) */
-    text-align: center; /* 텍스트를 중앙에 정렬 */
+.title {
+    margin: 0 0 10px 0; /* 아래쪽 간격 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+nav {
+    display: flex; /* 가로 정렬 */
+    gap: 15px; /* 링크 간 간격 */
 }

@@ -10,12 +10,14 @@ const Header = () => {
                 <Link to="/">
                     <img src={logo} alt="logo" className="logo" />
                 </Link>
-                <h1>이자리에 네비게이터 들어가면 돼</h1>
+                <div className="title"><h1>조별과제(Movie관련 페이지_강은교,차현욱,황회순)</h1></div>
+                <nav>
+                    <Link to="/news">News</Link>
+                    <Link to="/qna">QnA</Link>
+                </nav>
             </div>
-    
         </div>
     );
 };
-
 
 export default Header;
