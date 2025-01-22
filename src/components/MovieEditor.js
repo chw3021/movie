@@ -1,14 +1,15 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { MovieDispatchContext } from '../App';
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from './Button';
 
 const MovieEditor = ({ id, initData }) => {
-  const {onDelete, onUpdate} = useContext(MovieDispatchContext);
+  const {onUpdate} = useContext(MovieDispatchContext);
 
   const [state, setState] = useState({
     title: "",
     genre: "",
+    img: initData.img,
     link: "",
   });
   const [file, setFile] = useState(null);
@@ -17,8 +18,12 @@ const MovieEditor = ({ id, initData }) => {
     useEffect(()=>{
       if(initData){
           setState({
-              ...initData,
+            title: initData.title || "",
+            genre: initData.genre || "",
+            img: initData.img || "",
+            link: initData.link || "",
           })
+          
       }
    },[initData])
 
@@ -28,7 +33,7 @@ const MovieEditor = ({ id, initData }) => {
           ...state,
           title: e.target.value,
       });
-  };
+    };
 
   const handleChangeGenre =(e) => {
       setState({
@@ -64,22 +69,21 @@ const MovieEditor = ({ id, initData }) => {
 
       const formData = new FormData();
       formData.append('file', file);
+      formData.append('filename', state.img);
 
       try {
           if(window.confirm("영화를 정말 수정할까요?")){
 
               const response = await fetch('http://localhost:5000/upload', {
-                  method: 'POST',
-                  body: formData,
-                  });
+                method: 'POST',
+                body: formData,
+              });
           
-                  const data = await response.json();
-                  const img = data.filePath;
-
-
-              const {title, genre, link} = data;
-              onUpdate(id, title, genre, img, link);
-              navigate("/",{replace:true});
+              const data = await response.json();
+              const imgPath = data.filePath;
+              
+              onUpdate(id,{ ...state, img: imgPath });
+              //navigate(`/movieDetail/${id}`);
           }
       } catch (error) {
           console.error('Error uploading file:', error);

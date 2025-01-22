@@ -21,13 +21,18 @@ const MovieDetail = () => {
         return <div>영화를 불러오고 있는 중...</div>
     }
     else{
-        const {title,genre,img,link} = data;
         return (
             <div>
                 <Header/>
                 <Button text={"<뒤로 가기"} onClick={goBack}/>
                 <Button text={"수정하기"} onClick={goEdit}/>
-                <DetailItem title={title} genre={genre} img={img} link={link}/>
+                
+                <DetailItem
+                title={data.title}
+                genre={data.genre}
+                img={data.img}
+                link={data.link}
+                />
             </div>
         )
     }
