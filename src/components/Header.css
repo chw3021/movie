@@ -1,0 +1,20 @@
+
+.header {
+    display: flex;
+    align-items: center; /* 세로 방향으로 가운데 정렬 */
+    padding: 10px;
+    background-color: #f8f9fa; /* 배경색 (선택 사항) */
+}
+
+.logo {
+    width: 50px; /* 로고 크기 */
+    height: auto; /* 비율 유지 */
+    margin-right: 20px; /* 로고와 네비게이터 사이 간격 */
+}
+
+.header h1 {
+    flex-grow: 1; /* 남은 공간을 채움 */
+    margin: 0; /* 기본 여백 제거 */
+    font-size: 1.2rem; /* 제목 크기 (필요에 따라 조정) */
+    text-align: center; /* 텍스트를 중앙에 정렬 */
+}
