@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import { MovieStateContext } from "../App";
 import MovieList from "../components/MovieList";
+import Header from "../components/Header";
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
 
   return (
     <div>
+      <Header/>
       <MovieList data = {data}/>
     </div>
   );

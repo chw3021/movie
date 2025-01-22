@@ -16,6 +16,7 @@ const mockData = [
     title: '범죄도시3',
     genre: '액션, 느와르, 범죄',
     img: '/assets/imgs/범도3.jpg',
+    link: 'https://ko.wikipedia.org/wiki/%EB%B2%94%EC%A3%84%EB%8F%84%EC%8B%9C3',
   },
   {
     id: 'mock2',
