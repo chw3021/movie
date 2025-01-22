@@ -122,7 +122,7 @@ function App() {
   }, []);
 
 
-  const onCreate = (title, genre, img) => {
+  const onCreate = (title, genre, img, link) => {
     dispatch({
       type: "CREATE",
       data: {
@@ -130,12 +130,13 @@ function App() {
         title,
         genre,
         img,
+        link,
       },
     });
     idRef.current += 1;
   }
 
-  const onUpdate = (targetId, title, genre, img) =>{
+  const onUpdate = (targetId, title, genre, img, link) =>{
     dispatch({
       type:"UPDATE",
       data: {
@@ -143,6 +144,7 @@ function App() {
         title,
         genre,
         img,
+        link,
       },
     });
   };

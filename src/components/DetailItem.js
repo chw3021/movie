@@ -21,12 +21,15 @@ const DetailItem = ({ title, genre, img, link }) => {
 
     fetchContent();
   }, [link]);
-
   return (
     <div className="detail-item">
       <h1>{title}</h1>
       <h2>{genre}</h2>
-      <img src={img} alt={`${title} poster`} />
+      {img ? (
+        <img src={img} alt={`${title} poster`} />
+      ) : (
+        <div>이미지가 유효하지 않습니다.</div>
+      )}
       <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
       <a href={link} target="_blank" rel="noopener noreferrer">More Info</a>
     </div>

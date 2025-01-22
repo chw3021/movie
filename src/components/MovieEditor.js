@@ -60,16 +60,16 @@ const MovieEditor = ({ id, initData }) => {
   };
 
   const onSubmit = async (e) => {
-      e.preventDefault();
-
       if (!file) {
           alert('Please upload a file.');
           return;
       }
 
+      const fileName = state.img.split('/').pop(); // 경로를 제거하고 파일명만 추출
       const formData = new FormData();
       formData.append('file', file);
-      formData.append('filename', state.img);
+      formData.append('fileName', fileName);
+      console.log(fileName);
 
       try {
           if(window.confirm("영화를 정말 수정할까요?")){
@@ -82,7 +82,7 @@ const MovieEditor = ({ id, initData }) => {
               const data = await response.json();
               const imgPath = data.filePath;
               
-              onUpdate(id,{ ...state, img: imgPath });
+              onUpdate(id, state.title, state.genre, imgPath, state.link);
               navigate(`/movieDetail/${id}`);
           }
       } catch (error) {
