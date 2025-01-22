@@ -78,6 +78,12 @@ const mockData = [
     genre: 'SF, 판타지, 가족, 모험',
     img: '/assets/imgs/ET.jpg',
   },
+  {
+    id: 'mock12',
+    title: '아바타',
+    genre: '액션, 모험, SF, 스릴러',
+    img: '/assets/imgs/아바타.jpg',
+  },
 ];
 
 function reducer(state,action){
