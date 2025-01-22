@@ -1,60 +1,138 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import { MovieDispatchContext } from '../App';
+import { useNavigate, useParams } from "react-router-dom";
+import Button from './Button';
 
-const MovieEditor = ({ onCreate }) => {
-  const [title, setTitle] = useState('');
-  const [genre, setGenre] = useState('');
+const MovieEditor = ({ id, initData }) => {
+  const {onDelete, onUpdate} = useContext(MovieDispatchContext);
+
+  const [state, setState] = useState({
+    title: "",
+    genre: "",
+    link: "",
+  });
   const [file, setFile] = useState(null);
+  const navigate = useNavigate();
+  
+    useEffect(()=>{
+      if(initData){
+          setState({
+              ...initData,
+          })
+      }
+   },[initData])
 
+
+    const handlechangeTitle = (e) =>{
+      setState({
+          ...state,
+          title: e.target.value,
+      });
+  };
+
+  const handleChangeGenre =(e) => {
+      setState({
+          ...state,
+          genre: e.target.value,
+      });
+  };
+  
+  const handleChangeLink = (e) => {
+      setState({
+      ...state,
+      link: e.target.value,
+      });
+  };
+
+  const handleGoBack = () => {
+    
+    navigate(-1);
+
+   };
+  
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (e) => {
+      e.preventDefault();
 
-    if (!file) {
-      alert('Please upload a file.');
-      return;
-    }
+      if (!file) {
+          alert('Please upload a file.');
+          return;
+      }
 
-    const formData = new FormData();
-    formData.append('file', file);
+      const formData = new FormData();
+      formData.append('file', file);
 
-    try {
-      const response = await fetch('http://localhost:5000/upload', {
-        method: 'POST',
-        body: formData,
-      });
+      try {
+          if(window.confirm("영화를 정말 수정할까요?")){
 
-      const data = await response.json();
-      const imgPath = data.filePath;
+              const response = await fetch('http://localhost:5000/upload', {
+                  method: 'POST',
+                  body: formData,
+                  });
+          
+                  const data = await response.json();
+                  const img = data.filePath;
 
-      onCreate(title, genre, imgPath);
-      setTitle('');
-      setGenre('');
-      setFile(null);
-    } catch (error) {
-      console.error('Error uploading file:', error);
-    }
-  };
+
+              const {title, genre, link} = data;
+              onUpdate(id, title, genre, img, link);
+              navigate("/",{replace:true});
+          }
+      } catch (error) {
+          console.error('Error uploading file:', error);
+      }
+  };  
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Title:</label>
-        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+  <div className="Editor">
+    <div className="editor_section">
+      <h4>제목</h4>
+      <div className="input_wrapper">
+        <input
+          type="text"
+          value={state.title}
+          onChange={handlechangeTitle}
+          placeholder="제목 입력"
+        />
       </div>
-      <div>
-        <label>Genre:</label>
-        <input type="text" value={genre} onChange={(e) => setGenre(e.target.value)} />
+    </div>
+    <div className="editor_section">
+      <h4>장르</h4>
+      <div className="input_wrapper">
+        <input
+          type="text"
+          value={state.genre}
+          onChange={handleChangeGenre}
+          placeholder="장르 입력"
+        />
       </div>
-      <div>
-        <label>Image:</label>
+    </div>
+    <div className="editor_section">
+      <h4>링크</h4>
+      <div className="input_wrapper">
+        <input
+          type="text"
+          value={state.link}
+          onChange={handleChangeLink}
+          placeholder="링크 입력"
+        />
+      </div>
+    </div>
+    <div className="editor_section">
+      <h4>파일 업로드</h4>
+      <div className="input_wrapper">
         <input type="file" onChange={handleFileChange} />
       </div>
-      <button type="submit">Add Movie</button>
-    </form>
-  );
+    </div>
+    <div className="editor_section bottom_section">
+      <Button text={"취소"} onClick={handleGoBack} />
+      <Button text={"작성 완료"} type={"positive"} onClick={onSubmit} />
+    </div>
+  </div>
+);
 };
 
 export default MovieEditor;
