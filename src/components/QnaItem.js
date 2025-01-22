@@ -4,7 +4,6 @@ import "./QnaItem.css";
 const QnaItem = ({ question, answer }) => {
     const [isOpen, setIsOpen] = useState(false);
 
-    // 클릭 시 상태를 토글하는 함수
     const toggleAnswer = () => {
         setIsOpen(!isOpen);
     };
