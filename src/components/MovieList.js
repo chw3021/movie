@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 import MovieItem from "./MovieItem";
+import './MovieList.css';
+
 
 const sortOptionList = [
     { value: "전체", name: "전체" },

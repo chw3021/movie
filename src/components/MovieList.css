@@ -1,0 +1,101 @@
+/* 전체 컨테이너 */
+.MovieList {
+    width: 80%;
+    margin: 0 auto; /* 화면 중앙에 배치 */
+    padding: 20px;
+    background-color: #f9f9f9; /* 연한 배경색 */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* 메뉴 바 스타일 */
+.menu_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+/* 왼쪽 드롭다운 */
+.left_col select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* 가운데 검색 인풋 */
+.middle_col input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* 검색 버튼 */
+.right_col button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.right_col button:hover {
+    background-color: #45a049; /* 호버 시 색 변경 */
+}
+
+/* 리스트 컨테이너 */
+.list_wrapper {
+    display: flex;
+    flex-wrap: wrap; /* 줄 바꿈 */
+    gap: 20px; /* 항목 간 간격 */
+}
+
+
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .list_wrapper {
+        gap: 10px;
+    }
+
+    .MovieItem {
+        flex: 1 1 calc(50% - 10px); /* 2개씩 배치 */
+    }
+}
+
+@media (max-width: 480px) {
+    .MovieItem {
+        flex: 1 1 100%; /* 1개씩 배치 */
+    }
+}
+/* 리스트 아이템 */
+.MovieItem {
+    flex: 1 1 calc(33.333% - 20px); /* 3개씩 배치 (반응형) */
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.MovieItem img {
+    width: 100%; /* 컨테이너의 너비에 맞춤 */
+    height: 200px; /* 고정된 높이 설정 */
+    object-fit: cover; /* 이미지를 잘라서 고정 크기에 맞춤 */
+    border-radius: 5px; /* 모서리를 약간 둥글게 (선택 사항) */
+}
+
+.MovieItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
