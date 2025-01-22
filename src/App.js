@@ -47,6 +47,36 @@ const mockData = [
     genre: '오컬트, 미스터리, 공포',
     img: '/assets/imgs/파묘.jpg',
   },
+  {
+    id: 'mock7',
+    title: '김씨표류기',
+    genre: '드라마',
+    img: '/assets/imgs/김씨.jpg',
+  },
+  {
+    id: 'mock8',
+    title: '라라랜드',
+    genre: '드라마, 뮤지컬, 멜로/로맨스',
+    img: '/assets/imgs/라라랜드.jpg',
+  },
+  {
+    id: 'mock9',
+    title: '비긴어게인',
+    genre: '드라마, 멜로/로맨스, 코미디',
+    img: '/assets/imgs/비긴.jpg',
+  },
+  {
+    id: 'mock10',
+    title: '엑시트',
+    genre: '액션, 코미디',
+    img: '/assets/imgs/엑시트.jpg',
+  },
+  {
+    id: 'mock11',
+    title: 'E.T',
+    genre: 'SF, 판타지, 가족, 모험',
+    img: '/assets/imgs/ET.jpg',
+  },
 ];
 
 function reducer(state,action){
