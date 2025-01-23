@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Button from "./Button";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import MovieItem from "./MovieItem";
 import './MovieList.css';
 
@@ -18,9 +18,9 @@ const MovieList = ({data}) =>{
     const [search, setSearch] = useState("");
     const [searchCategory, setSearchCategory] = useState("전체");
   
-        useEffect(() => {
-            handleFilter();
-        }, []);
+    useEffect(() => {
+      handleFilter();
+    }, []);
     
       const handleFilter = () => {
         if (search.trim() === "") {
@@ -38,6 +38,7 @@ const MovieList = ({data}) =>{
           }
         }
       };
+      
       const handleSearchChange = (e) => {
           setSearch(e.target.value);
       };

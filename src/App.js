@@ -5,7 +5,7 @@ import News from './pages/News';
 import MovieDetail from './pages/MovieDetail';
 import MovieEdit from './pages/MovieEdit';
 import Qna from './pages/Qna';
-import React, { act, useEffect, useReducer, useRef, useState } from 'react';
+import React, { useEffect, useReducer, useRef, useState } from 'react';
 import MovieNew from './pages/MovieNew';
 
 export const MovieStateContext = React.createContext();
