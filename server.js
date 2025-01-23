@@ -7,14 +7,15 @@ const PORT = 5000;
 
 // CORS 설정 추가
 app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// 파일 업로드를 위한 multer 설정
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'public/assets/imgs');
+    cb(null, 'public/assets/imgs'); // 파일 저장 디렉토리 설정
   },
   filename: (req, file, cb) => {
-    const originalFilename = req.body.filename || Date.now() + path.extname(file.originalname);
+    const originalFilename = req.body.fileName || Date.now() + path.extname(file.originalname);
     cb(null, originalFilename);
   },
 });
@@ -28,7 +29,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
   if (!req.file) {
     return res.status(400).send('No file uploaded.');
   }
-  const filePath = `${req.filename}`;
+  const filePath = `/assets/imgs/${req.file.filename}`;
   res.json({ filePath });
 });
 

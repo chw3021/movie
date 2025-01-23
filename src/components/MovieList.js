@@ -20,7 +20,7 @@ const MovieList = ({data}) =>{
   
         useEffect(() => {
             handleFilter();
-        }, [search, searchCategory]);
+        }, []);
     
       const handleFilter = () => {
         if (search.trim() === "") {
