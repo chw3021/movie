@@ -18,9 +18,9 @@ const MovieList = ({data}) =>{
     const [search, setSearch] = useState("");
     const [searchCategory, setSearchCategory] = useState("전체");
   
-        useEffect(() => {
-            handleFilter();
-        }, [search, searchCategory]);
+    useEffect(() => {
+      handleFilter();
+    }, []);
     
       const handleFilter = () => {
         if (search.trim() === "") {
@@ -38,6 +38,7 @@ const MovieList = ({data}) =>{
           }
         }
       };
+      
       const handleSearchChange = (e) => {
           setSearch(e.target.value);
       };

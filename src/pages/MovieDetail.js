@@ -28,10 +28,7 @@ const MovieDetail = () => {
                 <Button text={"수정하기"} onClick={goEdit}/>
                 
                 <DetailItem
-                title={data.title}
-                genre={data.genre}
-                img={data.img}
-                link={data.link}
+                {...data}
                 />
             </div>
         )
