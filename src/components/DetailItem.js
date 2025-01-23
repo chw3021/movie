@@ -3,8 +3,6 @@ import './DetailItem.css';
 
 const DetailItem = ({ title, genre, img, link }) => {
   
-  
-  const youtubeEmbedUrl = ``
 
   return (
     <div className="detail-item">
@@ -17,7 +15,7 @@ const DetailItem = ({ title, genre, img, link }) => {
       )}
       <div className="iframe-container">
         <iframe
-          src={youtubeEmbedUrl}
+          src={link}
           title={title}
           className="scaled-iframe"
           allowFullScreen
