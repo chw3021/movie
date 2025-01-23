@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Button from "./Button";
-import { useNavigate } from "react-router-dom";
 import MovieItem from "./MovieItem";
 import './MovieList.css';
 

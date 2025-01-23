@@ -24,6 +24,87 @@
   margin-bottom: 20px;
 }
 
+.comments-section {
+  margin-top: 20px;
+}
+
+.comments-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.comments-section input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.comments-section textarea {
+  width: 100%;
+  height: 50px; /* 두 줄 정도 크기로 줄임 */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.comments-section button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comments-section button:hover {
+  background-color: #0056b3;
+}
+
+.comments-list {
+  margin-top: 10px;
+}
+
+.comment {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment strong {
+  margin-right: 10px;
+}
+
+.comment-rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating-section {
+  margin-top: 20px;
+}
+
+.rating-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars input {
+  display: none;
+}
+
+.star {
+  cursor: pointer;
+}
+
 .iframe-container {
   margin-top: 20px;
   width: 100%;
