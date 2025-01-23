@@ -23,6 +23,7 @@ const mockData = [
     title: '범죄와의 전쟁',
     genre: '느와르, 범죄',
     img: '/assets/imgs/범전.jpg',
+    link: 'https://ko.wikipedia.org/wiki/%EB%B2%94%EC%A3%84%EC%99%80%EC%9D%98_%EC%A0%84%EC%9F%81:_%EB%82%98%EC%81%9C%EB%86%88%EB%93%A4_%EC%A0%84%EC%84%B1%EC%8B%9C%EB%8C%80',
   },
   {
     id: 'mock3',
