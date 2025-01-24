@@ -123,6 +123,7 @@ function App() {
   const [isDataLoaded, setIsDataLoaded] = useState(false);
   const [data, dispatch] = useReducer(reducer,[]);
   const idRef = useRef(mockData.length + 1);
+  
 
   useEffect(() => {
     dispatch({
