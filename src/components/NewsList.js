@@ -2,6 +2,7 @@ import React from "react";
 import NewsItem from "./NewsItem";
 import "./NewsList.css";
 import Header from "./Header";
+import news1 from '../imgs/news1.jpeg';
 
 const sampleNews = [
   {
@@ -32,6 +33,13 @@ const NewsList = () => {
     <div>
       <Header />
       <h2>Movie News</h2>
+      <div className="banner">
+        <img
+          src={news1}
+          alt="News Banner"
+          className="news-banner"
+        />
+      </div>
       <ul className="news-list">
         {sampleNews.map((news) => (
           <NewsItem key={news.id} {...news} />
