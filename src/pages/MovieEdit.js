@@ -11,7 +11,7 @@ const MovieEdit = () =>{
     const {id} = useParams();
     const data = useMovie(id);
     const navigate = useNavigate();
-    const {onDelete, onUpdate} = useContext(MovieDispatchContext);
+    const {onDelete} = useContext(MovieDispatchContext);
 
     const goBack = () => {
         navigate(-1);
@@ -19,8 +19,8 @@ const MovieEdit = () =>{
 
     const onClickDelete = () => {
         if(window.confirm("영화를 정말 삭제할까요?")){
-            onDelete(id);
             navigate("/", {replace:true});
+            onDelete(id);
         }
     }
 
