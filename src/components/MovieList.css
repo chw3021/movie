@@ -58,7 +58,7 @@
     display: flex;
     flex-wrap: wrap; /* 줄 바꿈 */
     gap: 20px; /* 항목 간 간격 */
-    width: 1000px;
+    width: 400px;
 }
 
 

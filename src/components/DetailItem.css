@@ -1,4 +1,9 @@
 .detail-item {
+  width: 900px;
+  display: inline-block;
+  flex-wrap: wrap;
+  /*다음 줄로 어떻게 하는거였더라?*/
+  align-items: center;
   border: 1px solid #ddd;
   padding: 20px;
   margin: 20px;
@@ -18,7 +23,7 @@
 }
 
 .detail-item img {
-  max-width: 200px;
+  max-width: 300px;
   height: auto;
   border-radius: 10px;
   margin-bottom: 20px;
