@@ -1,0 +1,18 @@
+.NewsList .news{
+    width: 150px;
+    height: 100px;
+}
+
+.news{
+    text-align: center;
+}
+.mainNews{
+    width: 1000px;
+    padding: 40px;
+    background-color: aliceblue;
+    border: 1px solid rgb(197, 197, 197);
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+}
+

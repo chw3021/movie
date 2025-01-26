@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './DetailItem.css';
-import { FaStar } from 'react-icons/fa';
+import {FaStar} from 'react-icons/fa';
 
 const DetailItem = ({ title, genre, img, link }) => {
   const [rating, setRating] = useState(0);
