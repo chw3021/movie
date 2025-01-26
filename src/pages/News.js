@@ -10,8 +10,7 @@ const News =()=>{
         <div>
             <div>
                 <Header />
-                <h1>📢 Movie News</h1>
-                    <imgs src={news1} alt="news1" className="news1" />
+                <h1>Movie News</h1>
                 <NewsList />
             </div>
         </div>

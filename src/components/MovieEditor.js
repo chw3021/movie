@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { MovieDispatchContext } from '../App';
 import { useNavigate } from "react-router-dom";
 import Button from './Button';
+import './MovieEditor.css';
 
 const MovieEditor = ({ id, initData }) => {
   const {onUpdate} = useContext(MovieDispatchContext);

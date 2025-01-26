@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <Button text={"새 영화 추가"} onClick={() => navigate('/movieNew')} />
+      <Button text={"새 영화 추가"} onClick={() => navigate('/movieNew')} style={{backgroundColor: "aquamarine"}} />
       <MovieList data = {data}/>
     </div>
   );

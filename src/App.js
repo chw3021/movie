@@ -7,6 +7,7 @@ import MovieEdit from './pages/MovieEdit';
 import Qna from './pages/Qna';
 import React, { useEffect, useReducer, useRef, useState } from 'react';
 import MovieNew from './pages/MovieNew';
+import NewsList from './components/NewsList';
 
 export const MovieStateContext = React.createContext();
 export const MovieDispatchContext = React.createContext();
@@ -193,7 +194,7 @@ function App() {
           <div className="App">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/news" element={<News />} />
+              <Route path="/news" element={<NewsList />} />
               <Route path="/movieDetail/:id" element={<MovieDetail />} />
               <Route path="/qna" element={<Qna />} />
               <Route path="/movieEdit/:id" element={<MovieEdit />} />
