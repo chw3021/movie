@@ -1,8 +1,9 @@
 /* 전체 컨테이너 */
 .MovieList {
+    max-width: 900px;
     width: 80%;
     margin: 0 auto; /* 화면 중앙에 배치 */
-    padding: 20px;
+    padding: 40px;
     background-color: #f9f9f9; /* 연한 배경색 */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -30,6 +31,7 @@
 /* 가운데 검색 인풋 */
 .middle_col input {
     width: 100%;
+    margin-left: 100px;
     padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -55,10 +57,12 @@
 
 /* 리스트 컨테이너 */
 .list_wrapper {
+    text-align: center;
     display: flex;
-    flex-wrap: wrap; /* 줄 바꿈 */
+    /*flex-wrap: wrap; 줄 바꿈 */
     gap: 20px; /* 항목 간 간격 */
-    width: 400px;
+    width: 300px;
+    padding-bottom: 30px;
 }
 
 
@@ -81,9 +85,10 @@
 }
 /* 리스트 아이템 */
 .MovieItem {
-    flex: 1 1 calc(33.333% - 20px); /* 3개씩 배치 (반응형) */
+    width: 250px;
+    /*flex: 1 1 calc(33.333% - 20px);  3개씩 배치 (반응형) */
     background-color: #fff;
-    padding: 15px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -91,7 +96,7 @@
 }
 .MovieItem img {
     width: 100%; /* 컨테이너의 너비에 맞춤 */
-    height: 200px; /* 고정된 높이 설정 */
+    height: 300px; /* 고정된 높이 설정 */
     object-fit: cover; /* 이미지를 잘라서 고정 크기에 맞춤 */
     border-radius: 5px; /* 모서리를 약간 둥글게 (선택 사항) */
 }

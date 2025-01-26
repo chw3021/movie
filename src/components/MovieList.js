@@ -20,7 +20,7 @@ const MovieList = ({data}) =>{
   
     useEffect(() => {
       handleFilter();
-    }, []);
+    }, []); //여기 노란 줄 떠요!
     
       const handleFilter = () => {
         if (search.trim() === "") {
@@ -80,6 +80,7 @@ const MovieList = ({data}) =>{
                 {filteredData.map(movie => (
                 <MovieItem key={movie.id} {...movie} />
                 ))}
+                {/* 혹시 아이디 3부터 다음줄로 넘기기 같은게 있을까요? */}
             </div>
         </div>
     ) 
