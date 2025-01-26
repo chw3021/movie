@@ -2,7 +2,7 @@ import React from "react";
 import NewsItem from "./NewsItem";
 import "./NewsList.css";
 import Header from "./Header";
-import news1 from '../imgs/news1.jpeg';
+import news1 from '../imgs/news1.jpg';
 
 const sampleNews = [
   {
