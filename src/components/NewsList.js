@@ -32,13 +32,14 @@ const NewsList = () => {
   return (
     <div>
       <Header />
-      <h2>Movie News</h2>
+      <h2>MOVIE NEWS +</h2>
       <div className="banner">
         <img
           src={news1}
           alt="News Banner"
           className="news-banner"
         />
+        <h3>'파묘' 시사회 이벤트 일정</h3>
       </div>
       <ul className="news-list">
         {sampleNews.map((news) => (

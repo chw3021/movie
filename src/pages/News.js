@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../components/Header";
 import NewsList from "../components/NewsList";
 //import Image from 'react-dom'
-import news1 from "../imgs/news1.jpg";
 
 
 const News =()=>{
