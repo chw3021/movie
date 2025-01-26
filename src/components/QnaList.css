@@ -1,3 +1,8 @@
+.qna-list{
+    width: 900px;
+    display: inline-block;
+    height: 2000px;
+}
 .auth-section {
     margin-bottom: 20px;
     display: flex;
@@ -13,13 +18,13 @@
 
 .auth-section button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #6abdbd;
+    color: #000000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .auth-section button:hover {
-    background-color: #0056b3;
+    background-color: #6abdbd;
 }

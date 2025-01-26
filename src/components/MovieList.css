@@ -42,15 +42,15 @@
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #4caf50;
-    color: #fff;
+    background-color: #ff9900;
+    color: #000000;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .right_col button:hover {
-    background-color: #45a049; /* 호버 시 색 변경 */
+    background-color:  #6abdbd /* 호버 시 색 변경 */
 }
 
 /* 리스트 컨테이너 */
@@ -58,6 +58,7 @@
     display: flex;
     flex-wrap: wrap; /* 줄 바꿈 */
     gap: 20px; /* 항목 간 간격 */
+    width: 1000px;
 }
 
 

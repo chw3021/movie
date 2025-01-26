@@ -1,11 +1,12 @@
 .header {
-    height: 300px;
+    height: 320px;
     display: flex;
     flex-direction: column; /* 방향을 세로로 변경 */
     align-items: center; /* 기본적으로 가로 방향 중앙 정렬 */
     padding: 10px;
     background-color: #000000; /* 배경색 */
     position: relative; /* 로고 위치 조정을 위한 기준 */
+    box-shadow: 0 2px 5px rgba(209, 209, 209, 0.1);
 }
 
 .logo {
@@ -48,11 +49,11 @@ nav a {
 }
 
 .title{
-    color: rgb(255, 153, 0);
+    color: #ff9900;
 }
 nav a:hover {
-    color: #000000; /* 마우스 올렸을 때 텍스트 색상 변경 */
-    background-color: #ffffff; /* 배경색 변경 */
+    color: #ff9900; /* 마우스 올렸을 때 텍스트 색상 변경 */
+    background-color: #000000; /* 배경색 변경 */
     border-color: #000000; /* 테두리 색상 변경 */
 }
 

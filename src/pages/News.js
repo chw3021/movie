@@ -9,7 +9,6 @@ const News =()=>{
         <div>
             <div>
                 <Header />
-                <h1>Movie News</h1>
                 <NewsList />
             </div>
         </div>
