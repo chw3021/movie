@@ -180,7 +180,7 @@ function App() {
           <div className="App">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/news" element={<NewsList />} />
+              <Route path="/news" element={<News />} />
               <Route path="/movieDetail/:id" element={<MovieDetail />} />
               <Route path="/qna" element={<Qna />} />
               <Route path="/movieEdit/:id" element={<MovieEdit />} />

@@ -31,8 +31,6 @@ const sampleNews = [
 const NewsList = () => {
   return (
     <div>
-      <Header />
-      <h2>Movie News</h2>
       <div className="banner">
         <img
           src={news1}
