@@ -6,7 +6,7 @@ const QnaList = () => {
     const [qnaData, setQnaData] = useState([
         { question: "영화 페이지 만든사람", answer: "강은교, 차현욱, 황회순" },
         { question: "만들어진 이유", answer: "팀프로젝트" },
-        { question: "Q.내용", answer: "A.내용" },
+        { question: "내용", answer: "내용" },
     ]);
 
     const [newQuestion, setNewQuestion] = useState("");
@@ -33,6 +33,7 @@ const QnaList = () => {
 
     return (
         <div className="qna-list">
+            <h2>CHK QnA</h2>
             {!isAuthenticated ? (
                 <div className="auth-section">
                     <input

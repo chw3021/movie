@@ -1,17 +1,22 @@
 .header {
+    height: 320px;
     display: flex;
     flex-direction: column; /* 방향을 세로로 변경 */
     align-items: center; /* 기본적으로 가로 방향 중앙 정렬 */
     padding: 10px;
-    background-color: #f8f9fa; /* 배경색 */
+    background-color: #000000; /* 배경색 */
     position: relative; /* 로고 위치 조정을 위한 기준 */
+    box-shadow: 0 2px 5px rgba(209, 209, 209, 0.1);
 }
 
 .logo {
-    position: absolute; /* 절대 위치 지정 */
-    left: 10px; /* 왼쪽 끝에서 10px 간격 */
-    top: 10px; /* 위쪽에서 10px 간격 */
-    width: 50px; /* 로고 크기 */
+    /* position: absolute; 절대 위치 지정 */
+    display: flex;
+    text-align: center;
+    /* left: 10px; 왼쪽 끝에서 10px 간격
+    top: 10px; 위쪽에서 10px 간격 */
+    margin-top: 30px;
+    width: 100px; /* 로고 크기 */
     height: auto; /* 비율 유지 */
 }
 
@@ -26,19 +31,30 @@ nav {
 }
 nav a {
     text-decoration: none; /* 밑줄 제거 */
-    color: #333; /* 기본 텍스트 색상 */
-    background-color: aquamarine; /* 배경색*/
+    text-align: center;
+    color: #6abdbd; /* 기본 텍스트 색상 */
+    background-color: none; /* 배경색*/
     font-size: 16px; /* 폰트 크기 */
-    padding: 8px 15px; /* 패딩 추가 */
+    font-weight: 700;
+    width: 60px;
+    height: 25px;
+    padding: 4px 15px;  /* 패딩 추가 */
     border: 2px solid transparent; /* 초기 테두리는 투명 */
     border-radius: 5px; /* 테두리 둥글게 */
     transition: all 0.3s ease; /* 부드러운 전환 효과 */
 }
 
+.primary-nav{
+    margin-top: px;
+}
+
+.title{
+    color: #ff9900;
+}
 nav a:hover {
-    color: #fff; /* 마우스 올렸을 때 텍스트 색상 변경 */
-    background-color: #007bff; /* 배경색 변경 */
-    border-color: #007bff; /* 테두리 색상 변경 */
+    color: #ff9900; /* 마우스 올렸을 때 텍스트 색상 변경 */
+    background-color: #000000; /* 배경색 변경 */
+    border-color: #000000; /* 테두리 색상 변경 */
 }
 
 nav a:active {

@@ -7,7 +7,6 @@ const Qna = () => {
     return (
         <div>
             <Header />
-            <h1>Q&A Page</h1>
             <QnaList />
         </div>
     );

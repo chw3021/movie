@@ -2,7 +2,7 @@ import React from "react";
 import NewsItem from "./NewsItem";
 import "./NewsList.css";
 import Header from "./Header";
-import news1 from '../imgs/news1.jpeg';
+import news1 from '../imgs/news1.jpg';
 
 const sampleNews = [
   {
@@ -31,18 +31,30 @@ const sampleNews = [
 const NewsList = () => {
   return (
     <div>
+      <Header />
+      <h2>CHK MOVIE NEWS +</h2>
+
       <div className="banner">
         <img
           src={news1}
           alt="News Banner"
           className="news-banner"
         />
+        <h2>'파묘' 시사회 이벤트 일정</h2>
+        <p>국내 시사회 일정 역시 정해졌다. 언론 시사회 겸 무대인사 시사회가 2월 20일 롯데시네마 월드타워 점에서 열린다. 22일 개봉인데 20일 시사회는 너무 늦은 거 아닌가? 라고 생각할 수 있겠지만 앞서 말했듯 장재현 감독이 베를린 국제영화제에 참석하기에 귀국 후 최대한 빨리 만날 수 있는 일정을 조율한 것으로 보인다. 군대에 있는 이도현 배우만 빼고 주연 3명 모두 참석한다고 하니 파묘를 기다리는 사람들에겐 정말 좋은 기회가 될 것 같다.</p>
       </div>
-      <ul className="news-list">
-        {sampleNews.map((news) => (
-          <NewsItem key={news.id} {...news} />
-        ))}
-      </ul>
+
+      <div className="news-list_wrapper">
+        <h2>새로운 CHK 뉴스</h2>
+        <ul className="news-list">
+          {sampleNews.map((news) => (
+            <NewsItem key={news.id} {...news} />
+          ))}
+          <hr />
+        </ul>
+        <hr />
+      </div>
+
     </div>
   );
 };
