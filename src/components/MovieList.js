@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Button from "./Button";
-import { useNavigate } from "react-router-dom";
 import MovieItem from "./MovieItem";
 import './MovieList.css';
 
@@ -20,6 +19,7 @@ const MovieList = ({data}) =>{
   
     useEffect(() => {
       handleFilter();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []); //여기 노란 줄 떠요!
     
       const handleFilter = () => {
@@ -80,7 +80,6 @@ const MovieList = ({data}) =>{
                 {filteredData.map(movie => (
                 <MovieItem key={movie.id} {...movie} />
                 ))}
-                {/* 혹시 아이디 3부터 다음줄로 넘기기 같은게 있을까요? */}
             </div>
         </div>
     ) 
