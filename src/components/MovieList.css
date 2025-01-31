@@ -59,9 +59,9 @@
 .list_wrapper {
     text-align: center;
     display: flex;
-    /*flex-wrap: wrap; 줄 바꿈 */
+    flex-wrap: wrap; /* 줄 바꿈 */
     gap: 20px; /* 항목 간 간격 */
-    width: 300px;
+    width: 100%; /* 부모 컨테이너의 너비에 맞춤 */
     padding-bottom: 30px;
 }
 
@@ -101,7 +101,11 @@
     border-radius: 5px; /* 모서리를 약간 둥글게 (선택 사항) */
 }
 
+.MovieItem p {
+    width: 100%; /* 컨테이너의 너비에 맞춤 */
+}
 .MovieItem:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }

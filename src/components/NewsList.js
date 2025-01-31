@@ -31,7 +31,6 @@ const sampleNews = [
 const NewsList = () => {
   return (
     <div>
-      <Header />
       <h2>CHK MOVIE NEWS +</h2>
 
       <div className="banner">
