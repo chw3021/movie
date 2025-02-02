@@ -23,13 +23,16 @@ const MovieDetail = () => {
     else{
         return (
             <div>
-                <Header/>
-                <Button text={"<뒤로 가기"} onClick={goBack}/>
-                <Button text={"수정하기"} onClick={goEdit}/>
-                
-                <DetailItem
-                {...data}
-                />
+                <div>
+                    <Header/>
+                    <Button text={"<뒤로 가기"} onClick={goBack}/>
+                    <Button text={"수정하기"} onClick={goEdit}/>
+                </div>
+                <div>
+                    <DetailItem
+                    {...data}
+                    />
+                </div>
             </div>
         )
     }

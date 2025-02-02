@@ -44,6 +44,7 @@
 }
 
 .comments-section input {
+  max-width: 600px;
   width: 100%;
   padding: 10px;
   border-radius: 5px;
@@ -52,6 +53,7 @@
 }
 
 .comments-section textarea {
+  max-width: 700px;
   width: 100%;
   height: 50px; /* 두 줄 정도 크기로 줄임 */
   padding: 10px;
