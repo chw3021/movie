@@ -1,9 +1,10 @@
 .detail-item {
-  width: 900px;
+  max-width: 900px;
+  width: 100%;
   display: inline-block;
+  margin: 0px auto;
   flex-wrap: wrap;
-  /*다음 줄로 어떻게 하는거였더라?*/
-  align-items: center;
+  text-align: center;
   border: 1px solid #ddd;
   padding: 20px;
   margin: 20px;
@@ -14,19 +15,22 @@
 .detail-item h1 {
   font-size: 24px;
   margin-bottom: 10px;
+  color: #ddd;
 }
 
 .detail-item h2 {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 20px;
-  color: #555;
+  color: #8b8b8b;
 }
 
 .detail-item img {
   max-width: 300px;
+  width: 100%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .comments-section {
@@ -34,6 +38,7 @@
 }
 
 .comments-section h3 {
+  color: #dddddd;
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -57,7 +62,7 @@
 
 .comments-section button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #3b3b3b;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -65,7 +70,7 @@
 }
 
 .comments-section button:hover {
-  background-color: #0056b3;
+  background-color: #646464;
 }
 
 .comments-list {
@@ -94,6 +99,7 @@
 }
 
 .rating-section h3 {
+  color: #dddddd;
   font-size: 20px;
   margin-bottom: 10px;
 }

@@ -2,6 +2,8 @@ import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MovieDispatchContext } from '../App';
 import Button from '../components/Button';
+import '../components/MovieNew.css'
+import Header from '../components/Header';
 
 const MovieNew = () => {
   const { onCreate } = useContext(MovieDispatchContext);
@@ -66,49 +68,53 @@ const MovieNew = () => {
   };
 
   return (
-    <div className="Editor">
-      <div className="editor_section">
-        <h4>제목</h4>
-        <div className="input_wrapper">
-          <input
-            type="text"
-            value={state.title}
-            onChange={handleChangeTitle}
-            placeholder="제목 입력"
-          />
+    <div className='New'>
+      <Header />
+      <h2>새로운 영화</h2>
+      <div className="Editor">
+        <div className="editor_section">
+          <h4>제목</h4>
+          <div className="input_wrapper">
+            <input
+              type="text"
+              value={state.title}
+              onChange={handleChangeTitle}
+              placeholder="제목 입력"
+            />
+          </div>
         </div>
-      </div>
-      <div className="editor_section">
-        <h4>장르</h4>
-        <div className="input_wrapper">
-          <input
-            type="text"
-            value={state.genre}
-            onChange={handleChangeGenre}
-            placeholder="장르 입력"
-          />
+        <div className="editor_section">
+          <h4>장르</h4>
+          <div className="input_wrapper">
+            <input
+              type="text"
+              value={state.genre}
+              onChange={handleChangeGenre}
+              placeholder="장르 입력"
+            />
+          </div>
         </div>
-      </div>
-      <div className="editor_section">
-        <h4>링크</h4>
-        <div className="input_wrapper">
-          <input
-            type="text"
-            value={state.link}
-            onChange={handleChangeLink}
-            placeholder="링크 입력"
-          />
+        <div className="editor_section">
+          <h4>링크</h4>
+          <div className="input_wrapper">
+            <input
+              type="text"
+              value={state.link}
+              onChange={handleChangeLink}
+              placeholder="링크 입력"
+            />
+          </div>
         </div>
-      </div>
-      <div className="editor_section">
-        <h4>파일 업로드</h4>
-        <div className="input_wrapper">
-          <input type="file" onChange={handleFileChange} />
+        <div className="editor_section">
+          <h4 className='upload'>파일 업로드</h4>
+          <div className="input_wrapper">
+            <input className="file" type="file" onChange={handleFileChange} />
+          </div>
         </div>
-      </div>
-      <div className="editor_section bottom_section">
-        <Button text={"취소"} onClick={() => navigate('/')} />
-        <Button text={"작성 완료"} type={"positive"} onClick={handleSubmit} />
+        <div className="bottom_section">
+          <Button className="cancel" text={"취소"} onClick={() => navigate('/')} />
+          <Button className="done" text={"작성 완료"} type={"positive"} onClick={handleSubmit} />
+        </div>
       </div>
     </div>
   );

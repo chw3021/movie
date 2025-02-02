@@ -8,14 +8,12 @@
   list-style-type: none;
   text-align: center;
 }
-
-
-  h2 {
-  color: white;
-  margin: 30px 0 30px;
+h2 {
+color: white;
+margin: 30px 0 30px;
 }
 .banner h2 {
-  color: white;
+  color: rgb(204, 204, 204);
   margin: 30px 0 15px;
   padding-bottom: 1px;
 }
@@ -45,7 +43,7 @@
 .banner { /*사진이랑 사진 제목*/
   margin-bottom: 20px;
   text-align: center; /* 이미지를 가운데 정렬 */
-  color: white; /*사진 제목목 컬러*/
+  color: rgb(204, 204, 204); /*사진 제목목 컬러*/
   box-shadow: 0 4px 6px rgba(199, 199, 199, 0.1);
   padding-bottom: 20px;
 }
